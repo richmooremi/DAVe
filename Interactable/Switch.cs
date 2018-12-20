@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Switch : MonoBehaviour {
+public class Switch : Interactable
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public List<Interactable> targets;
+
+    public override void onInteraction()
+    {
+        foreach(Interactable t in targets)
+            t.onInteraction();
+    }
 }

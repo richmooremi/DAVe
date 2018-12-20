@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightGroup : MonoBehaviour {
+public class LightGroup : Interactable
+{
+    public List<Light> lights;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public override void onInteraction()
+    {
+        foreach (Light l in lights)
+            l.enabled = !l.enabled;
+    }
 }

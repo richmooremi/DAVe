@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public void onInteraction()
+    public virtual void onInteraction()
     {
 
     }
