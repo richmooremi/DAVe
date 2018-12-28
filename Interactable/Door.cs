@@ -12,8 +12,8 @@ public class Door : Interactable
 
     public GameObject requiredKey;  //key needed to open the door, leave empty for none
     public bool doorLocked;
-
-    public bool doorOpen = false;
+    
+    public bool doorOpen;
     public bool autoClose;
     public float horizontalMoveDistance;
     public float verticalMoveDistance;
@@ -24,6 +24,7 @@ public class Door : Interactable
     {
         //REMOVE ME
         autoClose = true;
+        doorOpen = false;
         secondsToClose = 1;
 
         //get the original position of this door
